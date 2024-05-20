@@ -7,8 +7,7 @@ const { ObjectId } = require("mongodb");
 module.exports = {
   getAdminPage: async (req, res) => {
     const detail = await user.find({role : "user"});
-
-    console.log(detail);
+    console.log('details',detail);
     // const userNameList = details.map(user => user.userName);
 
     // console.log(`this is : ${userDetails}`);
