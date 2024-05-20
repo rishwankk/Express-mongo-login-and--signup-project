@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link rel="stylesheet" href="../stylesheet/userHome.css">
+</head>
+<body>
+    <div class="user-details">
+       <% if (userDetails) { %>
+        <h2>User Details for <%= userDetails.userName %></h2>
+        <p>Age: <%= userDetails.age %></p>
+        <p>City: <%= userDetails.city %></p>
+        <p>Street: <%= userDetails.street %></p>
+        <p>PIN: <%= userDetails.pin %></p>
+        <p>House Number: <%= userDetails.houseNumber %></p>
+        <a href="/userHome" class="button">Back to Home</a>
+
+       <button id="updateDetailsLink"  class="update-button">update details </button>
+       <% } %>
+                 
+    </div>
+
+    <% if (userDetails) { %>
+        <div class="update-form-container" id="updateFormContainer">
+            <form action="/updatedetails" method="post" class="update-form">
+                <input type="text" name="age" placeholder="Enter your age" value="<%= userDetails.age %>">
+                <input type="text" name="city" placeholder="Enter your city" value="<%= userDetails.city %>">
+                <input type="text" name="street" placeholder="Enter your street" value="<%= userDetails.street %>">
+                <input type="text" name="pin" placeholder="Enter your pin" value="<%= userDetails.pin %>">
+                <input type="text" name="houseNumber" placeholder="Enter your house number" value="<%= userDetails.houseNumber %>">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <% } %>
+    
+        <script>
+            document.getElementById('updateDetailsLink').addEventListener('click', function() {
+                var updateFormContainer = document.getElementById('updateFormContainer');
+                if (updateFormContainer.style.display === 'none' || updateFormContainer.style.display === '') {
+                    updateFormContainer.style.display = 'block';
+                } else {
+                    updateFormContainer.style.display = 'none';
+                }
+            });
+        </script>
+
+   
+</body>
+</html>

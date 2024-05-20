@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link rel="stylesheet" href="../stylesheet/admin.css">
+</head>
+<body>
+    <h1>User Details</h1>
+    <% if (userDetails) { %>
+        <div class="user-details">
+            <p><strong> house number:</strong> <%= userDetails.houseNumber%></p>
+            <p><strong>street:</strong> <%= userDetails.street %></p>
+            <p><strong>City:</strong> <%= userDetails.city %></p>
+            <p><strong>Age:</strong> <%= userDetails.age %></p>
+            <p><strong>Pin:</strong> <%= userDetails.pin %></p>
+
+        </div>
+        
+     
+    <% } %>
+    <a href="/admin">Back to Admin Page</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>

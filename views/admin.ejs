@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link rel="stylesheet" href="../stylesheet/admin.css"
+</head>
+<body>
+
+    <h1  class="head">Welcome Admin</h1>
+    
+<div class="admin">   
+
+    <ul>
+        <% userName.forEach(function(name) { %>
+            <li><%= name.userName  %> 
+                
+                <a href="/details/<%= name.detail %>" class="details">show details</a>
+                
+            </li>
+
+        <% }); %>
+    </ul>     
+
+    <a href="/logout" class="logout">Logout</a>
+    
+</div>
+
+  
+    
+</body>
+</html>

@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.username {
+    font-size: 20px;
+    margin-top: 20px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userhome</title>
+    <link rel="stylesheet" href="../stylesheet/userHome.css">
+</head>
+<body>
+    <div class="userhome"> <% if (userName) { %>
+        <h2 class="welcome">Registered as <%=userName%></h2>
+    <% } %>  
+
+    <a href="/showDetails" class="button">Show details</a>
+    <a href="/logout" >Logout</a>
+   
+    
+
+
+
+</div>
+    
+    
+</body>
+</html>
